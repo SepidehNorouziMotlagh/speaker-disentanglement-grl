@@ -1,0 +1,36 @@
+seed: 42
+
+data:
+  metadata_file: data/processed/cremad_splits.csv
+  embedding_dir: data/processed/embeddings
+  audio_dir: data/raw/AudioWAV
+  embedding_dim: 768
+  num_emotions: 6
+  num_speakers: 64
+
+model:
+  projection_hidden_dim: 512
+  projection_dim: 256
+  classifier_hidden_dim: 128
+  dropout: 0.2
+  grl_lambda: 1.0
+
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 30
+  patience: 5
+
+verification:
+  attacker_hidden_dims: [128, 64]
+  attacker_dropout: 0.2
+  attacker_batch_size: 256
+  attacker_max_epochs: 30
+  attacker_patience: 5
+  attacker_learning_rate: 0.001
+  attacker_weight_decay: 0.0001
+  attacker_seed: 42
+  n_train_pairs_target: 20000
+  n_eval_pairs_target: 5000
+  pair_seed: 42

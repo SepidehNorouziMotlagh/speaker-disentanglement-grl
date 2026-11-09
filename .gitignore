@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Data — never commit (fully regenerable from prepare_dataset.py and split_dataset.py)
+/data/
+
+# Checkpoints — never commit
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Experiment trackers / logs
+wandb/
+runs/
+outputs/
+*.log
+
+# Env / secrets
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Local-only strays (previous versions kept for reference, not committed)
+*..py
+*..ipynb
+notebooks/*.json
